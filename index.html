@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悦动-让身体动起来</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- jquery库 -->
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="container-forms">
+          <div class="container-info">
+            <div class="info-item">
+              <div class="table">
+                <div class="table-cell">
+                  <p>
+                    已经有账号了吗?
+                  </p>
+                  <div class="btn">
+                    登录
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="table">
+                <div class="table-cell">
+                  <p>
+                    还没有账户吗?
+                  </p>
+                  <div class="btn">
+                    注册
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-form">
+            <!-- 登录表单 -->
+            <div class="form-item log-in">
+                <div class="table">
+                    <div class="table-cell">
+                        <div id="loginError" class="error-message"></div><!-- 显示登录错误信息 -->
+                        <input id="loginUsername" name="Username" placeholder="用户名" type="text" />
+                        <input id="loginPassword" name="Password" placeholder="密码" type="Password" />
+                        <div class="btn" id="loginBtn">
+                            登录
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 注册表单 -->
+            <div class="form-item sign-up">
+                <div class="table">
+                    <div class="table-cell">
+                        <div id="signupError" class="error-message"></div><!-- 显示注册错误信息 -->
+                        <input id="signupUsername" name="Username" placeholder="用户名" type="text" />
+                        <input id="signupEmail" name="email" placeholder="邮箱" type="text" />
+                        <input id="signupPassword" name="Password" placeholder="密码" type="Password" />
+                        <input id="confirmPassword" name="Password" placeholder="确认密码" type="Password" />
+                        <div class="btn" id="signupBtn">
+                            注册
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

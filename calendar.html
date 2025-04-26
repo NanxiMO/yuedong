@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悦动-让身体动起来</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <!-- 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- js -->
+    <script src="js/moment.js"></script>
+</head>
+<body>
+    <main>
+      <nav class="main-menu">
+        <h1>悦动</h1>
+        <img class="logo" src="img/logo.png" alt="" />
+        <ul>
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="shouye.html">
+              <i class="fa fa-home nav-icon"></i>
+              <span class="nav-text">首页</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="sport.html">
+              <i class="fa fa-person-running nav-icon"></i>
+              <span class="nav-text">运动</span>
+            </a>
+          </li>
+
+          <li class="nav-item active">
+            <b></b>
+            <b></b>
+            <a href="calendar.html">
+              <i class="fa fa-calendar-check nav-icon"></i>
+              <span class="nav-text">计划</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="activity.html">
+              <i class="fa fa-trophy nav-icon"></i>
+              <span class="nav-text">活动</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="user.html">
+              <i class="fa fa-user nav-icon"></i>
+              <span class="nav-text">我的</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <!-- 左边 -->
+        <div class="left-content">
+          <div class="container">
+
+            <div class="calendar-container">
+              <header>
+                  <div class="day" id="calendar-day"></div>
+                  <div class="month" id="calendar-month"></div>
+              </header>
+              <table class="calendar">
+                  <thead>
+                      <tr>
+                          <td>一</td>
+                          <td>二</td>
+                          <td>三</td>
+                          <td>四</td>
+                          <td>五</td>
+                          <td>六</td>
+                          <td>日</td>
+                      </tr>
+                  </thead>
+                  <tbody id="calendar-body"></tbody>
+              </table>
+            </div> <!-- end calendar-container -->
+          
+          </div> <!-- end container -->
+        </div>
+        <!-- 右边 -->
+        <div class="right-content">
+            <ul class="surveys grid">
+              <li class="survey-item">
+                
+                <span class="survey-name">
+                  腹肌塑造初级 · 巧克力腹肌养成
+                </span>
+                
+                <span class="survey-country grid-only">
+                  K2初学
+                </span>
+                
+                <div class="pull-right">
+                  
+                  <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 88%;"></span>
+                    </span>
+                    
+                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">
+                        88%
+                      </span>
+
+                      <span class="survey-completes">
+                        490 / 500
+                      </span>
+                    </span>
+                  </span>
+                  
+                  <span class="survey-end-date ended">
+                    2024 - 6月 10日
+                  </span>
+                  <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                    <span class="stage awarded">Awarded</span>
+                    <span class="stage live">Live</span>
+                    <span class="stage ended active">Ended</span>        
+                  </span>
+                </div>
+              </li>
+              <li class="survey-item">    
+                <span class="survey-name">
+                  哑铃负重练手臂
+                </span>
+                
+                <span class="survey-country grid-only">
+                  K2初学
+                </span>
+                
+                <div class="pull-right">
+                  
+                  <span class="survey-progress">
+                    <span class="survey-progress-bg">
+                      <span class="survey-progress-fg" style="width: 25%;"></span>
+                    </span>
+                    
+                    <span class="survey-progress-labels">
+                      <span class="survey-progress-label">
+                        25%
+                      </span>
+
+                      <span class="survey-completes">
+                        150 / 500
+                      </span>
+                    </span>
+                  </span>
+                  
+                  <span class="survey-end-date">
+                    2024 - 10月26日
+                  </span>
+                  <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                    <span class="stage awarded">Awarded</span>
+                    <span class="stage live active">Live</span>
+                    <span class="stage ended">Ended</span>        
+                  </span>
+                </div>
+              </li>
+              <li class="survey-item">
+                <span class="survey-name">
+                  Strong高阶 超音速燃脂
+                </span>
+                
+                <span class="survey-country grid-only">
+                  K4强化
+                </span>
+                
+                <div class="pull-right">
+                  <span class="survey-end-date">
+                    2024 - 12月31日
+                  </span>
+                  <span class="survey-stage">
+                    <span class="stage draft">Draft</span>
+                    <span class="stage awarded active">Awarded</span>
+                    <span class="stage live">Live</span>
+                    <span class="stage ended">Ended</span>        
+                  </span>
+                </div>
+              </li>
+            </ul>  
+        </div>
+      </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function generateCalendar() {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = today.getMonth(); // 0 - 11, where 0 = January
+                const date = today.getDate();
+                
+                const daysInMonth = new Date(year, month + 1, 0).getDate(); // 当月的总天数
+                const firstDayOfMonth = new Date(year, month, 1).getDay(); // 当月1号是星期几
+                const daysInPrevMonth = new Date(year, month, 0).getDate(); // 上月的总天数
+                
+                const calendarBody = document.getElementById('calendar-body');
+
+                // 更新header
+                document.getElementById('calendar-day').textContent = date;
+                document.getElementById('calendar-month').textContent = `${year}年${month + 1}月`;
+
+                let calendarHTML = '<tr>';
+                let day = 1;
+                let i = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1; // 调整为从星期一开始
+
+                // 填充上个月的最后几天
+                for (let j = i; j > 0; j--) {
+                    calendarHTML += `<td class="prev-month">${daysInPrevMonth - j + 1}</td>`;
+                }
+
+                // 填充当前月的天数
+                while (day <= daysInMonth) {
+                    if (i > 6) {
+                        calendarHTML += '</tr><tr>';
+                        i = 0;
+                    }
+                    const isToday = (day === date) ? 'current-day' : '';
+                    calendarHTML += `
+                        <td class="${isToday}" data-day="${day}">
+                            ${day}
+                            <div class="dot" style="display: none;"></div> <!-- 红色圆点默认隐藏 -->
+                        </td>`;
+                    day++;
+                    i++;
+                }
+
+                // 填充下个月的前几天
+                let nextMonthDay = 1;
+                while (i <= 6) {
+                    calendarHTML += `<td class="next-month">${nextMonthDay}</td>`;
+                    nextMonthDay++;
+                    i++;
+                }
+
+                calendarHTML += '</tr>';
+                calendarBody.innerHTML = calendarHTML;
+
+                // 为每个日期单元格绑定点击事件
+                const days = calendarBody.querySelectorAll('td[data-day]');
+                days.forEach(day => {
+                    day.addEventListener('click', function() {
+                        const selectedDay = this.getAttribute('data-day');
+                        addPlanToDay(selectedDay, month + 1, year);
+
+                        // 显示红色圆点
+                        const dot = this.querySelector('.dot');
+                        if (dot) {
+                            dot.style.display = 'block';
+                        }
+                    });
+                });
+            }
+
+            function addPlanToDay(day, month, year) {
+                const planContainer = document.querySelector('.right-content .surveys');
+                const newPlan = document.createElement('li');
+                newPlan.className = 'survey-item';
+                newPlan.innerHTML = `
+                    <span class="survey-name">健身计划 - ${year}年${month}月${day}日</span>
+                    <span class="survey-country grid-only">K1初学</span>
+                    <div class="pull-right">
+                        <span class="survey-end-date">计划已添加</span>
+                    </div>
+                `;
+                planContainer.appendChild(newPlan);
+                alert(`已为 ${year}年${month}月${day}日 添加健身计划！`);
+            }
+
+            generateCalendar();
+        });
+    </script>
+  </body>
+</html>

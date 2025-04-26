@@ -1,0 +1,302 @@
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.action {
+    flex: 1;
+    padding: 16px;
+    margin: 0 8px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.action span {
+    display: block;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.green {
+    background-color: #4caf50;
+}
+
+.blue {
+    background-color: #2196f3;
+}
+
+.purple {
+    background-color: #9c27b0;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.day {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.today {
+    background-color: #4caf50;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.recommendation {
+    background-color: #eeeeee;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto; /* 当内容超出时，显示垂直滚动条 */
+    overflow-x: hidden; /* 禁止水平滚动 */
+    scrollbar-width: none; /* 隐藏滚动条*/
+    max-height: 200px;
+}
+
+.plan {
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.plan-button {
+    display: flex; /* 启用弹性布局 */
+    align-items: center; /* 图标和文字垂直居中 */
+    justify-content: center; /* 内容水平居中 */
+    padding: 12px 16px; /* 内边距 */
+    background-color: #ff342b; /* 按钮背景颜色 */
+    color: #fff; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    border-radius: 20px; /* 圆角 */
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    font-size: 16px; /* 字体大小 */
+    gap: 8px; /* 图标和文字之间的间距 */
+}
+
+.plan-lable {
+line-height: 22px;
+font-size: 17px;
+color: #fff;
+font-family: sans-serif;
+letter-spacing: 1px;
+}
+
+.plan-button:hover {
+    background-color: #e02d26; /* 鼠标悬停时的背景颜色 */
+}
+
+.plan-button:hover .svg-icon {
+animation: slope 1s linear infinite;
+}
+
+@keyframes slope {
+0% {
+}
+
+50% {
+    transform: rotate(10deg);
+}
+
+100% {
+}
+}
+
+/* .plan-header {
+    font-size: 16px;
+    margin-bottom: 8px;
+} */
+
+.plan-content {
+    display: flex; /* 启用弹性布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 子元素水平居中 */
+    justify-content: space-between; /* 子元素之间均匀分布 */
+    gap: 16px; /* 子元素之间的间距 */
+    padding: 16px; /* 内边距 */
+    background-color: #f9f9f9; /* 背景颜色 */
+    border-radius: 8px; /* 圆角 */
+}
+
+.plan-content img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.plan-info {
+    display: flex; /* 启用弹性布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 子元素水平居中 */
+    text-align: center; /* 文本居中 */
+}
+
+.plan-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.plan-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.plan-days {
+    display: flex; /* 启用弹性布局 */
+    flex-wrap: wrap; /* 如果子元素超出宽度，换行 */
+    gap: 8px; /* 子元素之间的间距 */
+    justify-content: center; /* 子元素水平居中 */
+}
+
+.plan-days .day {
+    flex: 1;
+    text-align: center;
+    background-color: #eeeeee;
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+.plan-days .day:last-child {
+    margin-right: 0;
+}
+
+
+.recommendation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-item img {
+    width: 105px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 12px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.item-details {
+    font-size: 12px;
+    color: #777;
+}
+
+.add-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+
+/* 右边样式 */
+
+.section {
+    padding: 20px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.card .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.card h1{
+    text-align: center;
+    font-size: 35px;
+    margin: 20px;    
+}
+
+.card .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .data div {
+    text-align: center;
+}
+.card .data div span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+.card .data div strong {
+    font-size: 20px;
+    color: #333;
+}
+
+/* 无边框文本框样式 */
+.editable {
+    border: none; /* 去掉边框 */
+    font-weight: bold; /* 继承加粗样式 */
+    text-align: center; /* 居中对齐 */
+    width: 100%; /* 宽度100% */
+    outline: none; /* 去掉聚焦时的边框 */
+    appearance: none; /* 去掉默认样式 */
+    padding: 0; /* 去掉内边距 */
+    font-size: 20px;
+    color: #333;
+}
+
+@media screen and (max-width: 720px) {
+    .recommendation{
+       display: none; 
+    }
+    
+}

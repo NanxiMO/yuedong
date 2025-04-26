@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@300;400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+nav ul,
+nav ul li {
+  outline: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+	/* background: #212140; */
+}
+
+h3{
+  margin-left: 50px;
+}
+
+/* 主要内容区域的样式 */
+
+main {
+  display: grid;
+  grid-template-columns: 13% 87%;
+  width: 100%;
+  margin: 40px;
+  background: rgb(254, 254, 254);
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+  z-index: 10;
+}
+
+/* 主菜单的样式 */
+.main-menu {
+  overflow: hidden;
+  background: rgb(73, 57, 113);
+  padding-top: 10px;
+  border-radius: 15px 0 0 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-menu h1 {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0 30px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+.logo {
+  display: none;
+}
+
+/* 导航项的基本样式 */
+.nav-item {
+  position: relative;
+  display: block;
+}
+
+.nav-item a {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
+  margin-left: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* 导航项下方的虚拟元素样式 */
+.nav-item b:nth-child(1) {
+  position: absolute;
+  top: -15px;
+  height: 15px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+/* 导航项下方的虚拟元素前景样式 */
+.nav-item b:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 20px;
+  background: rgb(73, 57, 113);
+}
+
+.nav-item b:nth-child(2) {
+  position: absolute;
+  bottom: -15px;
+  height: 15px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+.nav-item b:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  background: rgb(73, 57, 113);
+}
+
+/* 激活的导航项样式 */
+.nav-item.active b:nth-child(1),
+.nav-item.active b:nth-child(2) {
+  display: block;
+}
+
+.nav-item.active a {
+  text-decoration: none;
+  color: #000;
+  background: rgb(254, 254, 254);
+}
+
+/* 导航图标的样式 */
+.nav-icon {
+  width: 60px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 导航文本的样式 */
+.nav-text {
+  display: block;
+  width: 120px;
+  height: 20px;
+}
+
+/* 内容区域的样式 */
+
+.content {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+/* 左侧内容区域的样式 */
+
+.left-content {
+  /* display: grid; */
+  grid-template-rows: 50% 50%;
+  background: #f6f7fb;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+/* 右侧内容区域的样式 */
+
+.right-content {
+  display: grid;
+  grid-template-rows: 5% 20% 75%;
+  background: #f6f7fb;
+  margin: 15px 15px 15px 0;
+  padding: 10px 0;
+  border-radius: 15px;
+}
+
+
+
+/* 屏幕宽度小于或等于1500px时的样式 */
+
+@media (max-width: 1500px) {
+  main {
+    grid-template-columns: 6% 94%;
+  }
+
+  .main-menu h1 {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+    width: 30px;
+    margin: 20px auto;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .content {
+    grid-template-columns: 70% 30%;
+  }
+}
+
+@media (max-width: 1310px) {
+  main {
+    grid-template-columns: 8% 92%;
+    margin: 30px;
+  }
+
+  .content {
+    grid-template-columns: 65% 35%;
+  }
+
+
+  .btn {
+    padding: 8px 16px;
+    margin: 10px 0;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+	
+	.right-content {
+		grid-template-rows: 4% 20% 76%;
+		margin: 15px 15px 15px 0;
+	}
+}
+
+@media (max-width: 1150px) {
+  .content {
+    grid-template-columns: 60% 40%;
+  }
+
+  .left-content {
+    grid-template-rows: 50% 50%;
+    margin: 15px;
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 8px 8px;
+    font-size: 0.9rem;
+  }
+
+
+  .right-content {
+    grid-template-rows: 4% 19% 36% 41%;
+  }
+}
+
+@media (max-width: 1050px) {
+	 .right-content {
+      grid-template-rows: 4% 19% 37% 40%;
+  }
+}
+
+@media (max-width: 910px) {
+  main {
+    grid-template-columns: 10% 90%;
+    margin: 20px;
+  }
+
+  .content {
+    grid-template-columns: 55% 45%;
+  }
+
+  .left-content {
+    grid-template-rows: 50% 50%;
+    padding: 30px 20px 20px;
+  }
+
+}
+
+@media (max-width: 880px) {
+  .content {
+    grid-template-columns: 52% 48%;
+  }
+}
+
+@media (max-width: 720px) {
+  main {
+    grid-template-columns: 15% 85%;
+  }
+
+  .content {
+    grid-template-columns: 100%;
+    grid-template-rows: 45% 55%;
+    grid-template-areas:
+      "rightContent"
+      "leftContent";
+  }
+
+  .left-content {
+    grid-area: leftContent;
+		grid-template-rows: 45% 55%;
+    padding: 10px 20px 10px;
+  }
+
+  .right-content {
+    grid-area: rightContent;
+		grid-template-rows: 5% 40% 50%;
+    margin: 15px 15px 0 15px;
+    padding: 10px 0 0;
+    gap: 15px;
+  }
+}

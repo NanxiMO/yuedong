@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>悦动-让身体动起来</title>
+    <link rel="stylesheet" href="css/activity.css">
+    <!-- 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script src="js/activity.js"></script>
+</head>
+<body>
+    <main>
+      <nav class="main-menu">
+        <h1>悦动</h1>
+        <img class="logo" src="img/logo.png" alt="" />
+        <ul>
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="shouye.html">
+              <i class="fa fa-home nav-icon"></i>
+              <span class="nav-text">首页</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="sport.html">
+              <i class="fa fa-person-running nav-icon"></i>
+              <span class="nav-text">运动</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="calendar.html">
+              <i class="fa fa-calendar-check nav-icon"></i>
+              <span class="nav-text">计划</span>
+            </a>
+          </li>
+
+          <li class="nav-item active">
+            <b></b>
+            <b></b>
+            <a href="activity.html">
+              <i class="fa fa-trophy nav-icon"></i>
+              <span class="nav-text">活动</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <b></b>
+            <b></b>
+            <a href="user.html">
+              <i class="fa fa-user nav-icon"></i>
+              <span class="nav-text">我的</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <div class="app-container">
+          <div class="app-header">
+            <div class="app-header-left">
+              <div class="search-wrapper">
+                <input class="search-input" type="text" placeholder="搜索活动">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+                  <defs></defs>
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="M21 21l-4.35-4.35"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="app-header-right">
+              <button class="mode-switch" title="Switch Theme">
+                <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                  <defs></defs>
+                  <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                </svg>
+              </button>
+              <button class="notification-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+              </button>
+              <button class="profile-btn">
+                <img src="img/p0.jpg" />
+                <span>胡楠楠</span>
+              </button>
+            </div>
+            <button class="messages-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
+            </button>
+          </div>
+          <div class="app-content">
+            <div class="projects-section">
+              <div class="projects-section-header">
+                <p>活动</p>
+                <p class="time"></p>
+              </div>
+              <div class="projects-section-line">
+                <div class="projects-status">
+                  <div class="item-status">
+                    <span class="status-number">45</span>
+                    <span class="status-type">正在进行</span>
+                  </div>
+                  <div class="item-status">
+                    <span class="status-number">24</span>
+                    <span class="status-type">即将上新</span>
+                  </div>
+                  <div class="item-status">
+                    <span class="status-number">62</span>
+                    <span class="status-type">活动总数</span>
+                  </div>
+                </div>
+                <div class="view-actions">
+                  <button class="view-btn list-view" title="List View">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                      <line x1="8" y1="6" x2="21" y2="6" />
+                      <line x1="8" y1="12" x2="21" y2="12" />
+                      <line x1="8" y1="18" x2="21" y2="18" />
+                      <line x1="3" y1="6" x2="3.01" y2="6" />
+                      <line x1="3" y1="12" x2="3.01" y2="12" />
+                      <line x1="3" y1="18" x2="3.01" y2="18" /></svg>
+                  </button>
+                  <button class="view-btn grid-view active" title="Grid View">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                      <rect x="3" y="3" width="7" height="7" />
+                      <rect x="14" y="3" width="7" height="7" />
+                      <rect x="14" y="14" width="7" height="7" />
+                      <rect x="3" y="14" width="7" height="7" /></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="project-boxes jsGridView">
+                <div class="project-box-wrapper">
+                  <div class="project-box" style="background-color: #fee4cb;">
+                    <div class="project-box-header">
+                      <span>05.11-06.10</span>
+                      <div class="more-wrapper">
+                        <button class="project-btn-more">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="12" cy="5" r="1" />
+                            <circle cx="12" cy="19" r="1" /></svg>
+                        </button>
+                  </div>
+                </div>
+                <div class="project-box-content-header">
+                  <p class="box-content-header">勇士回归三节课挑战</p>
+                  <p class="box-content-subheader">1-3次</p>
+                </div>
+                <div class="box-progress-wrapper">
+                  <p class="box-progress-header">进度</p>
+                  <div class="box-progress-bar">
+                    <span class="box-progress" style="width: 60%; background-color: #ff942e"></span>
+                  </div>
+                  <p class="box-progress-percentage">60%</p>
+                </div>
+                <div class="project-box-footer">
+                  <div class="participants">
+                    <img src="img/p1.jpg" alt="participant">
+                    <img src="img/p2.jpg" alt="participant">
+                    <button class="add-participant" style="color: #ff942e;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="days-left" style="color: #ff942e;">
+                    还剩18天
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-box-wrapper">
+              <div class="project-box" style="background-color: #e9e7fd;">
+                <div class="project-box-header">
+                  <span>05.15-06.10</span>
+                  <div class="more-wrapper">
+                    <button class="project-btn-more">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="12" cy="5" r="1" />
+                        <circle cx="12" cy="19" r="1" /></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="project-box-content-header">
+                  <p class="box-content-header">以爱为营</p>
+                  <p class="box-content-subheader">520-5200千卡</p>
+                </div>
+                <div class="box-progress-wrapper">
+                  <p class="box-progress-header">进度</p>
+                  <div class="box-progress-bar">
+                    <span class="box-progress" style="width: 50%; background-color: #4f3ff0"></span>
+                  </div>
+                  <p class="box-progress-percentage">50%</p>
+                </div>
+                <div class="project-box-footer">
+                  <div class="participants">
+                    <img src="img/p3.jpg" alt="participant">
+                    <img src="img/p1.jpg" alt="participant">
+                    <button class="add-participant" style="color: #4f3ff0;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="days-left" style="color: #4f3ff0;">
+                    还剩18天
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-box-wrapper">
+              <div class="project-box">
+                <div class="project-box-header">
+                  <span>05.28 18:00-23:00</span>
+                  <div class="more-wrapper">
+                    <button class="project-btn-more">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="12" cy="5" r="1" />
+                        <circle cx="12" cy="19" r="1" /></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="project-box-content-header">
+                  <p class="box-content-header">夜骑单次距离赛</p>
+                  <p class="box-content-subheader">2-20公里</p>
+                </div>
+                <div class="box-progress-wrapper">
+                  <p class="box-progress-header">进度</p>
+                  <div class="box-progress-bar">
+                    <span class="box-progress" style="width: 80%; background-color: #096c86"></span>
+                  </div>
+                  <p class="box-progress-percentage">80%</p>
+                </div>
+                <div class="project-box-footer">
+                  <div class="participants">
+                    <img src="img/p4.jpg" alt="participant">
+                    <img src="img/p2.jpg" alt="participant">
+                    <button class="add-participant" style="color: #096c86;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="days-left" style="color: #096c86;">
+                    还剩5天
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-box-wrapper">
+              <div class="project-box" style="background-color: #ffd3e2;">
+                <div class="project-box-header">
+                  <span>05.01-05.31</span>
+                  <div class="more-wrapper">
+                    <button class="project-btn-more">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="12" cy="5" r="1" />
+                        <circle cx="12" cy="19" r="1" /></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="project-box-content-header">
+                  <p class="box-content-header">五月徒步次数赛</p>
+                  <p class="box-content-subheader">2-10次</p>
+                </div>
+                <div class="box-progress-wrapper">
+                  <p class="box-progress-header">进度</p>
+                  <div class="box-progress-bar">
+                    <span class="box-progress" style="width: 70%; background-color: #df3670"></span>
+                  </div>
+                  <p class="box-progress-percentage">70%</p>
+                </div>
+                <div class="project-box-footer">
+                  <div class="participants">
+                    <img src="img/p5.jpg" alt="participant">
+                    <img src="img/p1.jpg" alt="participant">
+                    <button class="add-participant" style="color: #df3670;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="days-left" style="color: #df3670;">
+                    还剩8天
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-box-wrapper">
+              <div class="project-box" style="background-color: #c8f7dc;">
+                <div class="project-box-header">
+                  <span>05.29 06:00-9:00</span>
+                  <div class="more-wrapper">
+                    <button class="project-btn-more">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="12" cy="5" r="1" />
+                        <circle cx="12" cy="19" r="1" /></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="project-box-content-header">
+                  <p class="box-content-header">跳绳累积时长挑战赛</p>
+                  <p class="box-content-subheader">10-40分钟</p>
+                </div>
+                <div class="box-progress-wrapper">
+                  <p class="box-progress-header">进度</p>
+                  <div class="box-progress-bar">
+                    <span class="box-progress" style="width: 20%; background-color: #34c471"></span>
+                  </div>
+                  <p class="box-progress-percentage">20%</p>
+                </div>
+                <div class="project-box-footer">
+                  <div class="participants">
+                    <img src="img/p4.jpg" alt="participant">
+                    <img src="img/p6.jpg" alt="participant">
+                    <button class="add-participant" style="color: #34c471;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="days-left" style="color: #34c471;">
+                    还剩20天
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-box-wrapper">
+              <div class="project-box" style="background-color: #d5deff;">
+                <div class="project-box-header">
+                  <span>06.02 06:00-16:00</span>
+                  <div class="more-wrapper">
+                    <button class="project-btn-more">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="12" cy="5" r="1" />
+                        <circle cx="12" cy="19" r="1" /></svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="project-box-content-header">
+                  <p class="box-content-header">锦州马拉松</p>
+                  <p class="box-content-subheader">辽宁 · 锦州</p>
+                </div>
+                <div class="box-progress-wrapper">
+                  <p class="box-progress-header">进度</p>
+                  <div class="box-progress-bar">
+                    <span class="box-progress" style="width: 40%; background-color: #4067f9"></span>
+                  </div>
+                  <p class="box-progress-percentage">40%</p>
+                </div>
+                <div class="project-box-footer">
+                  <div class="participants">
+                    <img src="img/p7.jpg" alt="participant">
+                    <img src="img/p3.jpg" alt="participant">
+                    <button class="add-participant" style="color: #4067f9;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="days-left" style="color: #4067f9;">
+                    还剩10天
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="messages-section">
+          <button class="messages-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="15" y1="9" x2="9" y2="15" />
+              <line x1="9" y1="9" x2="15" y2="15" /></svg>
+          </button>
+          <div class="projects-section-header">
+            <p>活动反馈</p>
+          </div>
+          <div class="messages">
+            <div class="message-box">
+              <img src="img/p5.jpg" alt="profile image">
+              <div class="message-content">
+                <div class="message-header">
+                  <div class="name">徐嘉和</div>
+                  <div class="star-checkbox">
+                    <input type="checkbox" id="star-1">
+                    <label for="star-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="3 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <path d="M20.8 4.6c-1.5-1.5-3.9-1.5-5.4 0l-.4.4-.4-.4c-1.5-1.5-3.9-1.5-5.4 0-1.5 1.5-1.5 3.9 0 5.4l5.8 5.8 5.8-5.8c1.5-1.5 1.5-3.9 0-5.4z"></path>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+                <p class="message-line">
+                  获得新徽章:活力满满！ 🥳 
+                </p>
+                <p class="message-line time">
+                  05.26
+                </p>
+              </div>
+            </div>
+            <div class="message-box">
+              <img src="img/p4.jpg" alt="profile image">
+              <div class="message-content">
+                <div class="message-header">
+                  <div class="name">张瑜乐</div>
+                  <div class="star-checkbox">
+                    <input type="checkbox" id="star-2">
+                    <label for="star-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="3 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <path d="M20.8 4.6c-1.5-1.5-3.9-1.5-5.4 0l-.4.4-.4-.4c-1.5-1.5-3.9-1.5-5.4 0-1.5 1.5-1.5 3.9 0 5.4l5.8 5.8 5.8-5.8c1.5-1.5 1.5-3.9 0-5.4z"></path>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+                <p class="message-line">
+                  线下活动组织的趣味比赛很有意思，认识了几个一起撸铁的朋友！
+                </p>
+                <p class="message-line time">
+                  05.23
+                </p>
+              </div>
+            </div>
+            <div class="message-box">
+              <img src="img/p3.jpg" alt="profile image">
+              <div class="message-content">
+                <div class="message-header">
+                  <div class="name">薛寒俊</div>
+                  <div class="star-checkbox">
+                    <input type="checkbox" id="star-3">
+                    <label for="star-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="3 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <path d="M20.8 4.6c-1.5-1.5-3.9-1.5-5.4 0l-.4.4-.4-.4c-1.5-1.5-3.9-1.5-5.4 0-1.5 1.5-1.5 3.9 0 5.4l5.8 5.8 5.8-5.8c1.5-1.5 1.5-3.9 0-5.4z"></path>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+                <p class="message-line">
+                  训练计划自动同步到手环，心率区间提醒功能帮大忙了！🤩 
+                </p>
+                <p class="message-line time">
+                  05.23
+                </p>
+              </div>
+            </div>
+            <div class="message-box">
+              <img src="img/p2.jpg" alt="profile image">
+              <div class="message-content">
+                <div class="message-header">
+                  <div class="name">柯嘉聪</div>
+                  <div class="star-checkbox">
+                    <input type="checkbox" id="star-4">
+                    <label for="star-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="3 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                        <path d="M20.8 4.6c-1.5-1.5-3.9-1.5-5.4 0l-.4.4-.4-.4c-1.5-1.5-3.9-1.5-5.4 0-1.5 1.5-1.5 3.9 0 5.4l5.8 5.8 5.8-5.8c1.5-1.5 1.5-3.9 0-5.4z"></path>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+                <p class="message-line">
+                  AI动作检测很准，实时提醒我深蹲膝盖内扣的问题，比健身房私教还细致！
+                </p>
+                <p class="message-line time">
+                  05.22
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
