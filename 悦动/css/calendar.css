@@ -13,7 +13,7 @@ td {
   display: flex; /* 启用弹性布局 */
   flex-direction: column; /* 垂直排列子元素 */
   align-items: center; /* 子元素水平居中 */
-  justify-content: flex-start; /* 子元素从顶部开始排列 */
+  justify-content: center; 
   max-width: 100%; /* 确保不超出父容器宽度 */
   box-sizing: border-box; /* 包括内边距和边框在宽度内 */
   padding: 16px; /* 添加内边距 */
@@ -28,14 +28,13 @@ td {
   display: flex;
   justify-content:center;
   align-items:center;
-  margin-top: 60px;
 }
 
 .calendar-container {
   display: flex; /* 启用弹性布局 */
   flex-direction: column; /* 垂直排列子元素 */
   align-items: center; /* 子元素水平居中 */
-  justify-content: flex-start; /* 子元素从顶部开始排列 */
+  justify-content: center;
   width: 100%; /*占满父容器宽度 */
   border-radius: 8px; /* 添加圆角 */
   padding: 12px; /* 添加内边距 */
